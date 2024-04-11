@@ -1,0 +1,15 @@
+<% flash.each do |message_type, message| %>
+     <div class="flash-message <%= message_type %>"><%= message %></div>
+   <% end %>
+
+<h5>Title:</h5>
+<p><%= @book.title %></p>
+
+<h5>Body:</h5>
+<p><%= @book.body %></p>
+
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Back", books_path %>
+<%#= link_to "Back", book_path(@books.all) %>
+
